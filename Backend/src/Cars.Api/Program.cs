@@ -1,6 +1,9 @@
+using Cars.Api.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddSingleton<ICarService, CarService>();
 
 builder.Services.AddControllers();
 

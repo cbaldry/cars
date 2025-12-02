@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 2018,
+    "registrationNumber": "1ABC123",
+    "registrationExpiry": "2025-12-31"
+  },
+  {
+    "id": 2,
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2017,
+    "registrationNumber": "1XYZ789",
+    "registrationExpiry": "2024-11-30"
+  }
+]
+
