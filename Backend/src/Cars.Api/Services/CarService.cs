@@ -23,7 +23,7 @@ namespace Cars.Api.Services
 
             if (!string.IsNullOrWhiteSpace(makeFilter))
             {
-                query = query.Where(c => c.Make.Equals(makeFilter, StringComparison.OrdinalIgnoreCase));
+                query = query.Where(c => c.Make.Contains(makeFilter, StringComparison.OrdinalIgnoreCase));
             }
 
             return query.ToList();
