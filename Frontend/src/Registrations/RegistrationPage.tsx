@@ -15,6 +15,12 @@ type RegistrationStatusUpdate = {
 
 const HUB_URL = `${BASE_URL}/hubs/registration`;
 
+const statusClass = {
+  PENDING: "status-pending",
+  VALID: "status-valid",
+  EXPIRED: "status-expired",
+};
+
 export default function RegistrationPage() {
   const [cars, setCars] = useState<CarWithStatus[]>([]);
   const [loading, setLoading] = useState(true);
@@ -110,8 +116,8 @@ export default function RegistrationPage() {
           <tr>
             <th>Make</th>
             <th>Model</th>
+            <th>Year</th>
             <th>Reg #</th>
-            <th>Expiry</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -121,11 +127,13 @@ export default function RegistrationPage() {
               <tr key={c.id}>
                 <td>{c.make}</td>
                 <td>{c.model}</td>
+                <td>{c.year}</td>
                 <td>{c.registrationNumber}</td>
                 <td>
-                  {new Date(c.registrationExpiry).toLocaleDateString("en-AU")}
+                  <span className={`status-pill ${statusClass[c.status]}`}>
+                    {c.status}
+                  </span>
                 </td>
-                <td>{c.status}</td>
               </tr>
             ))}
         </tbody>

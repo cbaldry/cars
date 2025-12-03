@@ -42,7 +42,7 @@ export default function CarPage() {
             <th>Make</th>
             <th>Model</th>
             <th>Year</th>
-            <th>Registration</th>
+            <th>Reg #</th>
             <th>Expiry</th>
           </tr>
         </thead>
