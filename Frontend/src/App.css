@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f7f9fc;
+  --border: #dce3ec;
+  --text: #1a1a1a;
+  --text-muted: #6f7a88;
+  --accent: #007bff;
+  --accent-light: #e6f0ff;
+
+  --radius: 8px;
+  --transition: 150ms ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+header a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius);
+  transition: var(--transition);
 }
 
-.card {
-  padding: 2em;
+header a:hover {
+  background: var(--accent-light);
+  color: var(--accent);
 }
 
-.read-the-docs {
-  color: #888;
+main {
+  padding: 2rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+input {
+  padding: 0.6rem 0.8rem;
+  width: 240px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: var(--transition);
+  background: var(--bg-soft);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: var(--bg);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+tr:hover {
+  background: var(--accent-light);
+}
+
+.status-valid {
+  color: #22aa55;
+  font-weight: 600;
+}
+
+.status-expired {
+  color: #d9534f;
+  font-weight: 600;
 }
