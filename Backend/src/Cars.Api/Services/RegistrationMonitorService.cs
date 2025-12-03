@@ -39,7 +39,6 @@ namespace Cars.Api.Services
                     var update = new Registration
                     {
                         CarId = car.Id,
-                        RegistrationNumber = car.RegistrationNumber,
                         IsExpired = isExpired
                     };
 
