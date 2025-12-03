@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import CarPage from "./Cars/CarPage.tsx";
-import RegistrationPage from "./Registrations/RegistrationPage.tsx";
+import CarPage from "./cars/CarPage.tsx";
+import RegistrationPage from "./registrations/RegistrationPage.tsx";
 import "./App.css";
 
 function App() {

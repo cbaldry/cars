@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import type { Car } from "../types";
 
-export const BASE_URL = "https://localhost:7286";
+export const BASE_URL = "http://localhost:5196";
 
 export function useFetch(make?: string) {
   const [data, setData] = useState<Car[] | null>(null);

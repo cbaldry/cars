@@ -1,6 +1,17 @@
 @Cars.Api_HostAddress = http://localhost:5196
 
-GET {{Cars.Api_HostAddress}}/weatherforecast/
+###
+# GET all cars
+GET {{Cars.Api_HostAddress}}/api/cars
 Accept: application/json
 
 ###
+# GET cars filtered by make
+GET {{Cars.Api_HostAddress}}/api/cars?make=Toyota
+Accept: application/json
+
+###
+# Test the SignalR hub (requires a client)
+GET {{Cars.Api_HostAddress}}/hubs/registration
+
+
